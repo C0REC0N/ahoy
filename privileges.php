@@ -383,10 +383,10 @@ $checkBlocked = "SELECT reports FROM user WHERE userID = $userID";
 							}
 							echo "</div>";
 							
-							echo "<div class='userSearch'>";
-							echo "<b>Files Stored: </b>".$stats[6]."<br>";
-							echo "<br><b>Current Tasks: </b>".$stats[7]."<br>";
-							echo "<br><b>Desks: </b>".$stats[8]."<br>";
+							echo "<div class='userSearch'>";					
+							echo "<b>Current Quests: </b>".$stats[6]."<br>";
+							echo "<br><b>Completed Quests: </b>".$stats[7]."<br>";
+							echo "<br><b>Decks: </b>".$stats[8]."<br>";
 							if ($stats[9][0] == 0){
 								echo "<br><b>Invited: </b>".$stats[9][0]."";
 							} else {

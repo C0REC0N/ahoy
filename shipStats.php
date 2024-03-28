@@ -44,11 +44,17 @@ $shipID = $_GET['shipID'];
 		$m[] = 0;
 	}
 	
-	//files
+	$questQuery = "SELECT COUNT(taskID) AS quests FROM task WHERE shipID = $shipID AND completed = 0";
+	$questResult = mysqli_query($link, $questQuery);
+	$questRow = mysqli_fetch_assoc($questResult);
 	
-	//tasks
+	$compQuery = "SELECT COUNT(taskID) AS quests FROM task WHERE shipID = $shipID AND completed = 1";
+	$compResult = mysqli_query($link, $compQuery);
+	$compRow = mysqli_fetch_assoc($compResult);
 	
-	//decks
+	$decksQuery = "SELECT COUNT(fileID) AS decks FROM test_files WHERE shipID = $shipID";
+	$decksResult = mysqli_query($link, $decksQuery);
+	$decksRow = mysqli_fetch_assoc($decksResult);
 	
 	$iQuery = "SELECT username FROM user JOIN memberInvites ON user.userID = memberInvites.userID JOIN team ON user.userID = team.userID WHERE memberInvites.shipID = $shipID AND isOwner = 0 AND isAdmin = 0";
 	$iResult = mysqli_query($link, $iQuery);
@@ -61,7 +67,7 @@ $shipID = $_GET['shipID'];
 		$i[] = 0;
 	}
 	
-	$_SESSION['shipStats'] = [$nameRow['shipName'], $descRow['shipDescription'], $crewRow['crew'], $capRow['username'], $q, $m, 0, 0, 0, $i];
+	$_SESSION['shipStats'] = [$nameRow['shipName'], $descRow['shipDescription'], $crewRow['crew'], $capRow['username'], $q, $m, $questRow['quests'], $compRow['quests'], $decksRow['decks'], $i];
 	
 	$_SESSION['msg'] = "Ship Statistics Found";
 	echo "<script>window.location.href = 'privileges.php?shipID=$shipID';</script>";
