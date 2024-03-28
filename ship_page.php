@@ -11,9 +11,12 @@ $page = 'ship';
 $msg = $_SESSION['msg'];
 $userID = $_SESSION['userID'];
 
-if ($_SESSION['chat'] == true){
+$chat = $_SESSION['chat'];
+
+if ($chat == true){
 	
 	echo "<script>openNav();setHasSeen(true);</script>";
+	$_SESSION['chat'] == false;
 }
 
 //storing if the current user is an admin or an owner for role based access controls
@@ -406,7 +409,7 @@ $isPMQuery = "SELECT user.userID AS pID FROM user WHERE userID = $userID AND rol
 		echo '<script>speech("There are new messages in the ship chat!", true)</script>';
     }
 	
-	$_SESSION['chat'] = false;
+
 ?>
 
 </html>
