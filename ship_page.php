@@ -15,7 +15,7 @@ $chat = $_SESSION['chat'];
 
 if ($chat == true){
 	
-	echo "<script>openNav();</script>";
+	echo "<script>setTimeout(openNav,500);</script>";
 	$_SESSION['chat'] == false;
 }
 
