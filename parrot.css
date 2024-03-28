@@ -1,0 +1,151 @@
+	
+	/* Area for parrot and speech */
+	
+	#box { 
+		position: fixed;
+		float: right;
+		transition: 0.5s;
+	}
+	
+	.home {
+		right:0px;
+	}
+	
+	.ship {
+		right:250px;
+	}
+	
+	/* Parrot Image */
+	
+	#parrot {
+		float:right;
+		display: none;
+	}
+	
+	.parrot {
+		width: 100px;
+		cursor:pointer;
+		transition: 0.75s;
+		
+    }
+
+   .newParrot {
+		transition: 0.5s;
+		width: 50%;
+		
+    }
+
+	/* Speech Bubble */
+	
+	#message {
+		color: yellow;
+		background: #a53d38; 
+		border-radius: 50px 0px 50px 0px;
+		transition: 0.5s;
+		opacity: 1;
+		font-size: 15px;
+		float:right;
+		font-family: Papyrus;
+		display: none;
+	}
+	
+	.message { 
+
+		padding: 20px;
+	}
+	
+	.newMessage { 
+		right: 30%;
+		width:25%;
+		height: 25%;
+		padding: 30px;
+	}
+	
+	#message a {text-decoration: underline;}
+	
+	/* Help Menu */
+	
+	#help {
+	  height: auto;
+	  max-height:50%;
+	  width: 0;
+	  position: fixed;
+	  top: 0;
+	  background-color: #d49307;
+	  overflow: hidden;
+	  transition: 0.5s;
+	  padding-top: 10px 0px 0px 0px;
+	  font-family: Papyrus;
+	}
+	
+	/* Questions */
+	
+	#help section {
+		position: relative;
+		height: 300px;
+		width: 100%;
+		overflow-y: scroll;
+		z-index: 9999; /*higher than paralax */ 
+		text-align: center;
+}
+	
+	#help p {margin: 10px; color: white; cursor:pointer; background-color:#a32427; text-align:center; padding: 3px; border-radius: 5px;}
+	
+	#help p:hover {background-color: #b02c2d;}
+
+	#help b {margin: 10px; color: white}
+	
+	#main {
+		
+		transition:0.5s;
+	}
+	
+	/* Buttons */
+	#alert {
+	  border-radius: 0px 10px 0px 0px;
+	}
+	
+	#notif {
+	  border-radius: 10px 0px 0px 0px;
+	  float:right;
+	}
+	
+	.toggle { 
+	  background-color: #30bb8a;
+	  border: none;
+	  color: white;
+	  padding: 10px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 11px;
+	  transition: 0.2s;
+	}
+
+	#blocked {
+		float:right;
+		width: 50%;
+    }
+	
+	#blockedMessage {
+		color: yellow;
+		background: #a53d38; 
+		border-radius: 50px 0px 50px 0px;
+		transition: 0.5s;
+		opacity: 1;
+		font-size: 15px;
+		float:right;
+		font-family: Papyrus;
+		right: 30%;
+		width:25%;
+		height: 25%;
+		padding: 30px;
+	}
+
+		
+	#what, #how {
+		
+		display:none;
+	}
+
+	

@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+select {
+  appearance: none;
+  /*  safari  */
+  -webkit-appearance: none;
+  /*  other styles for aesthetics */
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+/* footer for placing buttons/text at the bottom of a container */
+.footer{ 
+  position: fixed;     
+  text-align: center;    
+  bottom: 10px; 
+}
+
+.side-nav {
+  width: 200px;
+  height: 100%;
+  background: #d49307;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 20px;
+  overflow-y: scroll;
+}
+
+.crew-nav {
+  width: 250px;
+  height: 100%;
+  background: #d49307;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px 30px;
+}
+
+.chat-nav {
+  width: 0px;
+  height: 100%;
+  background-image: url('Ahoy_Wood.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+  padding: 20px 30px;
+}
+ /* change the fonts for the chatnav window */
+.chat-nav h1 {
+  font-family: Arial, sans-serif;
+  font-size: 3vw;
+  color: white;
+}
+.chat-nav p1 {
+  font-family: Arial, sans-serif;
+  font-size: 2vw;
+  color: white;
+}
+.chat-nav p2 {
+  font-family: Arial, sans-serif;
+  font-size: 0.25px;
+  padding: -50px -50px;
+  color: black;
+}
+
+.chat-nav iframe {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 300; 
+  background: white;
+  border-radius: 5px;
+}
+
+.chat-nav textarea {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 225px;
+  border: 50px;
+  padding: 0px;
+  text-align: left;
+  background-color: white;
+  border-radius: 5px;
+}
+.chat-nav form textarea{
+  height: 100px;
+}
+
+.centerlogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  width: 350px;
+  height: 350px;
+  padding: 10px 10px;
+}
+
+.pfp {
+	
+	padding: 0px;
+	left 
+}
+
+.profile-image {
+ 
+  width:150px;
+  height: 150px;
+border-radius:50%;
+
+}
+
+.logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.prof-links {
+  list-style: none;
+  position: relative;
+}
+
+.prof-links li {
+  padding: 10px 0;
+}
+
+.prof-links li a {
+  color: #f1f1f1;
+  text-decoration: none;
+
+}
+
+.prof-links li a p {
+  font-family: papyrus;
+}
+
+.login-page {
+  background-color: #004aad;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 16px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.login-button {
+  background-color: #ffd79b;
+  color: #004aad;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.two {
+  box-shadow: 0 0 30px 10px #ffd79b;
+}
+.ship-button {
+  background-color: #707070;
+  color: white;
+  padding: 14px 20px;
+  margin: 20px 20px;
+  height: 200px;
+  width: 250px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.task-button {
+  background-color: #707070;
+  color: white;
+  padding: 14px 20px;
+  margin: 20px 20px;
+  height: 200px;
+  width: 250px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.crew-member-button {
+  background-color: transparent;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.crew-member-button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.crew-member-button:active {
+  background-color: #e0e0e0;
+}
+
+
+.btn-container {
+  position: absolute; 
+  display: flex; 
+  flex-direction: column; 
+  top:50%;
+  transform: translate(0%, -50%);
+  background: white; 
+  border-radius: 0 10px 10px 0; 
+  padding: 0 0px 0px 0px;
+}
+
+.btn2 {
+  background-color: #ffd79b;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  height: 40px; 
+  width: 90px; 
+  border: 2px solid #d49307;
+  cursor: pointer;
+  /*border-radius: 2px;*/
+}
+
+.btn2:hover {
+  font-weight: bold;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add flex to containers */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.smallrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-left {
+  width: 200px;
+  height: 100%;
+  background: #d49307;
+}
+
+.flex-right {
+  flex: 1;
+  background: lightcyan;
+  height: 100%;
+}
+
+.page-wrapper {
+  background: lightcyan;
+}
+
+/* For the ship creation pop-up */
+.form-popup {
+  border: lightcyan;
+  display: none;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+.account-popup {
+  border: #d49307;
+  background-color: #d49307;
+  position: absolute;
+  display: none;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+.upload-form button[type="submit"],
+.upload-form .cancel {
+  display: block;
+  width: 100%;
+  height:50px;
+  margin-bottom: 10px;
+}
+.upload-form input[type="file"] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.upload-form button[type="submit"] {
+  background-color: #04AA6D;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* CSS for popup fields in the ship_page.php */
+.file-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('pirate_scroll.jpg'); /* Add your parchment background image */
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  color: black;
+  font-family: 'Papyrus', cursive; /* Pirate-themed font */
+}
+
+.file-popup h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.file-popup ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.file-popup ul li {
+  margin-bottom: 10px;
+}
+
+.file-popup ul li a {
+  color: black; /* Gold color for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.file-popup ul li a:hover {
+  color: #ff8c00; /* Darker gold color on hover */
+}
+
+.file-popup .btn.cancel {
+  background-color: #8b4513; /* Brown color for cancel button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-popup .btn.cancel:hover {
+  background-color: #654321; /* Darker brown color on hover */
+}
+
+
+/* Ship creation buttons */
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+
+.cancel {
+  background-color: red;
+}
+
+.bg {
+  background-color: #437cd7;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.terms-box {
+  max-width: 650px;
+  background-color: #437cd7;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 20px;
+  height: 250px;
+  overflow-y: auto;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terms-text {
+  padding: 0 20px;
+  height: 250px;
+  overflow-y: auto;
+  font-size: 14;
+  font-weight: 500;
+  color: #111;
+}
+
+.terms-text::-webkit-scrollbar{
+  width: 2px;
+  background-color: #282828;
+}
+.terms-text::-webkit-scrollbar-thumb{
+  background-color: #f1f1f1;
+}
+.terms-text h2{
+  text-transform: uppercase;
+}
+.terms-text h4{
+  font-size: 13px;
+  text-align: center;
+  padding: 0 40px;
+}
+.terms-box h4 span{
+  color: rgb(245, 68, 68);
+  text-transform: uppercase;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* Syles for privileges page */
+
+.userSearch {
+
+  background-color: #707070;
+  color: #d49307;
+  padding: 20px;
+  margin: 20px;
+  height: auto;
+  width: 250px;
+  border-radius: 5%;
+  text-align: center;
+  max-height: 250px;
+}
+
+#requests, #reports, #roleRequests {
+	
+	display:none;
+}

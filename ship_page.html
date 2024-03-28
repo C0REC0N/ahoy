@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AHOY </title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="parrot.css">
+    <script src="main.js"></script> 
+	<script src="parrot.js"></script> 
+</head>
+
+<body style="background-color: lightcyan;" onload="welcome(false,true)">
+<header>
+	<audio id="squawk">
+	  <source src="parrot.wav" type="audio/wav">
+	</audio>
+
+	<section id="box" >
+		<img src="parrot.png" alt="Parrot" id="parrot" onclick="controlHelp()">
+		<br>
+		<div id="message"></div>
+	</section>
+	
+	<div id="help" onmouseleave="y = setTimeout(closeHelp,1000)" onmouseenter="clearTimeout(y)">
+		<section>
+			<p onclick="speech('Press `Add New Ship` on the home page and fill in the details')">How do I create a ship?</p>
+			<p onclick="speech('Press `Logout` on the home side bar')">How do I logout?</p>
+			<p onclick="speech('Press `Edit Account` on the home side bar')">How do I change my username or password?</p>
+			<p onclick="speech('Press `Edit Profile` on the home page side bar')">How do I edit my profile?</p>
+			<p onclick="speech('Press `Enable 2FA` on the home page side bar')">How do I enable 2-factor authentication?</p>
+			<p onclick="speech('Press `Crew Management` on the right side bar on the ship page')">How do I manage my crew on a ship?</p>
+			<p onclick="speech('Press `Crew Chat` on the right side bar on the ship page')">How do I message a crew member on a ship?</p>
+			<p onclick="speech('Press `Decks` on the left side bar on the ship page')">How do I view my decks for a ship?</p>
+			<p onclick="speech('Press `Spam` on the left side bar on the ship page')">How do I view any spam on a ship?</p>
+			<p onclick="speech('Press `Current Tasks` on the left side bar on the ship page')">How do I see my current tasks for a ship?</p>
+			<p onclick="speech('Press `Manage Ship` on the left side bar on the ship page')">How do I edit the name or description of a ship?</p>
+			<p onclick="speech('Click the AHOY! logo on the left side bar on the ship page')">How do I leave my ship page?</p>
+			<p onclick="speech('Press `Toggle Notifications` below')">How do I turn off notifications?</p>
+			<p onclick="speech('Press `Toggle Squawk` below')">How do I turn off the notification sound?</p>
+		</section>
+		<br>
+		<button onclick="toggle()" id="alert" class="toggle">Toggle Squawk</button>
+		<button onclick="notifications()" id="notif" class="toggle">Toggle Notifications</button>
+	</div>
+</header>
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="flex-left">
+                <div class="side-nav">
+                    <a href="ship_select.html" class="logo">
+                        <img src="AHOYYYYY.png" class="logo-img">
+                    </a>
+                    <ul class="prof-links">
+                        <li> <a href="#"> <button class="login-button">Decks</button> </a></li>
+                        <li> <a href="#"> <button class="login-button">Current Tasks</button> </a></li>
+                        <li> <a href="#"> <button class="login-button">Spam</button> </a></li>
+                        <li> <a href="#"> <button class="login-button" onclick="openAcc()">Manage Ship</button> </a></li>
+                    </ul>
+                    <div class="account-popup" id="accountForm">
+                        <form action="" class="form-container" style="padding-left: 25px;">
+                            <p>Edit Ship</p>
+                        
+                            <label for="shipname"><b>Ship Name</b></label>
+                            <input type="text" placeholder="Enter New Ship Name" name="shipname" required>
+                        
+                            <label for="shipdesc"><b>Ship Description</b></label>
+                            <input type="text" placeholder="Enter New Ship Description" name="ship desc" required>
+                        
+                            <button type="submit" class="btn" onclick="closeAcc()" onsubmit="speech('Youve changed your ship settings!',true)">Save & Exit</button>
+                            <button type="button" class="btn cancel" onclick="closeAcc()">Exit</button>
+
+                            <button type="button" class="btn cancel" onclick="confDelShip()" onsubmit="speech('Youve deleted your ship!',true)">Delete Ship</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-right">
+                <div id="crewNav" class="crew-nav">
+                    <ul class="prof-links">
+                        <li> <a href="#"> <button class="login-button" onclick="openCrew()">Crew Management</button> </a></li>
+                        <li> <a href="#"> <p> Online: </p> </a></li>
+                            <ul> <p> Max Tuma </p> </ul>
+                            <ul> <p> CJ Pell </p> </ul>
+                            <ul> <p> Matty Nicholson </p> </ul>
+                            <ul> <p> Callum Gray </p> </ul>
+                            <ul> <p> Owen Pringle </p> </ul>
+                            <ul> <p> Manas Sandhu </p> </ul>
+                            <ul> <p> Xiang Su </p> </ul>
+                        <li> <a href="#"> <p> Offline: </p> </a></li>
+                            
+                    </ul>
+
+                    <div class="account-popup" id="crewForm">
+                        <form action="" class="form-container" style="padding-left: 25px;">
+                            <p>Edit Crew</p>
+                        
+                            <label for="crewmate"><b>Remove Crewmate</b></label>
+                            <input type="text" placeholder="Enter Crewmate Name" name="crewmate" required>
+                        
+                            <button type="submit" class="btn" onclick="closeCrew()" onsubmit="speech('Youve made a crew member walk the plank!',true)">Walk The Plank</button>
+                            <button type="button" class="btn cancel" onclick="closeCrew()">Spare Them</button>
+                          </form>
+                    </div>
+                    <div class = footer> 
+                        <button class="login-button" onclick="openNav()">Crew Chat</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-right">
+                <div id="chatNav" class="chat-nav">
+                    <h1>Chat</h1>
+                    <textarea placeholder="No Messages" name="msgbox"></textarea>
+
+                    <form action="/action_page.php" class="form-container">
+                        <p1>Send to...<p1>
+                        <select name="recipient" id="recipient">
+                            <option value="All">All</option>
+                            <option value="Max Tuma">Max Tuma</option>
+                            <option value="CJ Pell">CJ Pell</option>
+                            <option value="Matty Nicholson">Matty Nicholson</option>
+                            <option value="Callum Gray">Callum Gray</option>
+                            <option value="Owen Pringle">Owen Pringle</option>
+                            <option value="Manas Sandhu">Manas Sandhu</option>
+                            <option value="Xiang Su">Xiang Su</option>
+                        </select>
+                        
+                        <textarea placeholder="Type message.." name="msg" height="100" required></textarea>
+
+                        <button type="submit" class="btn" onclick="speech('Youve sent a message!',true)">Send</button>
+                      </form>
+                    <div class = footer> 
+                        <button class="login-button" onclick="closeNav()">Close Chat</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+</script>
+
+</html>
