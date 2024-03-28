@@ -291,7 +291,6 @@ $checkBlocked = "SELECT reports FROM user WHERE userID = $userID";
 							
 							echo "<div class='userSearch'>";
 							echo "<b>".strtoupper($info[0])."</b><br>";						
-							echo "<br>User ".$info[1]."<br>";
 							echo "<br>".$info[2]."<br>";
 							echo "<br>".ucfirst($info[3])."<br>";
 							if ($info[4] == 1) {
