@@ -106,7 +106,7 @@ if (empty($errors)) {
 
             echo "<script>
                     alert('You have successfully registered, you will be redirected to login')
-                    window.location.href = 'login.php';
+                    window.location.href = 'index.php';
                 </script>";
         } else {
             echo 'Registration failed.';

@@ -183,7 +183,7 @@ function closepfpForm() {
                             ?> 
                         </ul>
 
-                        <a href="login.php"><button class="login-button">Logout</button> </a>
+                        <a href="index.php"><button class="login-button">Logout</button> </a>
                     </div>
 
                     <div class="account-popup" id="2FAForm">
