@@ -381,6 +381,9 @@ $checkBlocked = "SELECT reports FROM user WHERE userID = $userID";
 									echo "$m<br>";
 									}
 							}
+							echo "</div>";
+							
+							echo "<div class='userSearch'>";
 							echo "<br><b>Files Stored: </b>".$stats[6]."<br>";
 							echo "<br><b>Current Tasks: </b>".$stats[7]."<br>";
 							echo "<br><b>Desks: </b>".$stats[8]."<br>";
@@ -392,6 +395,7 @@ $checkBlocked = "SELECT reports FROM user WHERE userID = $userID";
 									echo "$i<br>";
 									}
 							}
+							echo "</div>";
 							echo "</div>";
 							
 					
