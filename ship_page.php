@@ -11,13 +11,6 @@ $page = 'ship';
 $msg = $_SESSION['msg'];
 $userID = $_SESSION['userID'];
 
-$chat = $_SESSION['chat'];
-
-if ($chat == true){
-	
-	echo "<script>setTimeout(openNav,500);</script>";
-	$_SESSION['chat'] == false;
-}
 
 //storing if the current user is an admin or an owner for role based access controls
 if(isset($_GET['shipID'])) {            

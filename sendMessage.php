@@ -29,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['msg']) && isset($_GET[
         $newMessageQuery = "UPDATE team SET newMessage = 1 WHERE shipID = $shipID AND userID <> $userID";
 		$new = mysqli_query($link, $newMessageQuery);
         // Redirect back to the chat page
-		$_SESSION['chat'] = true;
         header("Location: ship_page.php?shipID=$shipID");
         exit();
     } else {
