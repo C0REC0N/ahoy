@@ -15,7 +15,7 @@ $chat = $_SESSION['chat'];
 
 if ($chat == true){
 	
-	echo "<script>openNav();setHasSeen(true);</script>";
+	echo "<script>alert('hi')</script>";
 	$_SESSION['chat'] == false;
 }
 
