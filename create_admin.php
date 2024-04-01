@@ -19,7 +19,7 @@ if(isset($_POST['username']) && isset($_POST['shipID'])) {
             $updateAdminResult = mysqli_query($link, $updateAdminQuery);
 
             if($updateAdminResult) {
-                echo "<script>alert('$username has been made an admin.');
+                $_SESSION['msg'] = '$username has been made an admin.';
                 window.location.href = 'ship_page.php?shipID=$shipID';</script>";
             } else {
                 echo "Error: " . mysqli_error($link);
