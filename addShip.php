@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                     if ($r2){
-                        $_SESSION['msg'] = "$sn has been built!";
+                        $_SESSION['msg'] = "$un has been built!";
                         header("Location: ship_select.php");
                         exit();
                     } else {

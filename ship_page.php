@@ -11,7 +11,6 @@ $page = 'ship';
 $msg = $_SESSION['msg'];
 $userID = $_SESSION['userID'];
 
-
 //storing if the current user is an admin or an owner for role based access controls
 if(isset($_GET['shipID'])) {            
     $shipID = $_GET['shipID'];
@@ -348,11 +347,11 @@ $isPMQuery = "SELECT user.userID AS pID FROM user WHERE userID = $userID AND rol
                         <h1>Chat</h1>
                         <script>var hasSeen = hasSeen();</script>
                         <!-- an iframe which will display all of the messages -->
-                        <iframe src="chat.php?shipID=<?php echo $shipID; ?>&seen=hasSeen" width="100%" height="300" style="background-color: lightcyan;" scrolling="yes"></iframe>
-                        
-                        <!-- drop-down to select recipient (might just be deleted) -->
+                        <div style="border-radius: 5px;"  font-family= "Arial, sans-serif;">
+                        <iframe src="chat.php?shipID=<?php echo $shipID; ?>" width="100%" height="300" style="background-color:white;" frameBorder="0" scrolling="yes"></iframe>
+                        </div>
+                        <!-- Message box heading -->
                         <p1>Message<p1>
-
                         <!-- form to post messages to the server -->
                         <form method="post" action="sendMessage.php?shipID=<?php echo $shipID; ?>">
                         <textarea placeholder="Type message.." name="msg" required></textarea>
@@ -401,8 +400,6 @@ $isPMQuery = "SELECT user.userID AS pID FROM user WHERE userID = $userID AND rol
 		
 		echo '<script>speech("There are new messages in the ship chat!", true)</script>';
     }
-	
-
 ?>
 
 </html>

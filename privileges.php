@@ -291,6 +291,7 @@ $checkBlocked = "SELECT reports FROM user WHERE userID = $userID";
 							
 							echo "<div class='userSearch'>";
 							echo "<b>".strtoupper($info[0])."</b><br>";						
+							echo "<br>User ".$info[1]."<br>";
 							echo "<br>".$info[2]."<br>";
 							echo "<br>".ucfirst($info[3])."<br>";
 							if ($info[4] == 1) {
@@ -380,21 +381,17 @@ $checkBlocked = "SELECT reports FROM user WHERE userID = $userID";
 									echo "$m<br>";
 									}
 							}
-							echo "</div>";
-							
-							echo "<div class='userSearch'>";					
-							echo "<b>Current Quests: </b>".$stats[6]."<br>";
-							echo "<br><b>Completed Quests: </b>".$stats[7]."<br>";
-							echo "<br><b>Decks: </b>".$stats[8]."<br>";
+							echo "<br><b>Files Stored: </b>".$stats[6]."<br>";
+							echo "<br><b>Current Tasks: </b>".$stats[7]."<br>";
+							echo "<br><b>Desks: </b>".$stats[8]."<br>";
 							if ($stats[9][0] == 0){
-								echo "<br><b>Invited: </b>".$stats[9][0]."";
+								echo "<br><b>Invited: </b>".$stats[9][0]."<br>";
 							} else {
 								echo "<br><b>Invited:</b><br>";
 								foreach($stats[9] as $i) {
-									echo "$i";
+									echo "$i<br>";
 									}
 							}
-							echo "</div>";
 							echo "</div>";
 							
 					

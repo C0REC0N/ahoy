@@ -183,10 +183,10 @@ function closepfpForm() {
                             ?> 
                         </ul>
 
-                        <a href="index.php"><button class="login-button">Logout</button> </a>
+                        <a href="login.php"><button class="login-button">Logout</button> </a>
                     </div>
 
-                    <div class="account-popup" id="2FAForm">
+                    <div class="file-popup" id="2FAForm">
                         <form action="" class="form-container" style="padding-left: 20px;">
                             <p style="text-align: center;">Would you like to enable two factor authentication?</p>
                         
@@ -230,8 +230,8 @@ function closepfpForm() {
 
 
 
-                    <div class="account-popup" id="invitationList">
-                            <h1 style="text-align: center;">Ship Invitations</h1>
+                    <div class="file-popup" id="invitationList">
+                            <h1 style="text-align: center; color: #004aad; text-shadow: #ffd79b 0 0 20px;">Ship Invitations</h1>
                             <?php
                                 $userID = $_SESSION['userID'];
                                 //Checking to see if there are any invites for the user
@@ -265,7 +265,7 @@ function closepfpForm() {
                             <button type="button" class="btn cancel" style="" onclick="closeInvites()">Exit</button>
                     </div>
 
-                    <div class="account-popup" id="accountForm">
+                    <div class="file-popup" id="accountForm">
                         <form action="updateDetails.php" method="post" style="padding-left: 25px;">
 
                             <h2>Edit Account</h2>
@@ -290,7 +290,7 @@ function closepfpForm() {
                 </div>
             </div>
             <div class="flex-right">
-                <h1 style="text-align: center; padding: 20px;">
+                <h1 style="text-align: center; padding: 20px; color: #d49307; text-shadow: #ffd79b 0 0 20px; font-size: 50px;">
                     Select Your Ship
                 </h1>
                 <?php

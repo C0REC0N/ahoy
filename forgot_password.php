@@ -16,7 +16,6 @@
         background-color:#004aad;
       }
       .container {
-
         width: 100%;
         max-width: 500px;
         margin: 0 auto;
@@ -158,7 +157,7 @@
             echo 'Mailer Error: ' . $mail->ErrorInfo;
         }
 
-         load('index.php');
+         load('login.php');
          exit;
          
      }

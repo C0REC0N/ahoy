@@ -104,7 +104,7 @@ if(isset($_GET['shipID'])) {
                 </div>
             </div>
             <div class="flex-right">
-                <h1 style="text-align: center; padding: 20px;">
+                <h1 style="text-align: center; padding: 20px; color: #d49307; text-shadow: #ffd79b 0 0 20px; font-size: 50px;">
                    Select Your Quest
                 </h1>
                 <?php
