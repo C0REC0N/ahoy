@@ -165,6 +165,7 @@ if (empty($errors)) {
       <div class="smallrow" style="padding: 10px">
           <select id="roleChoice" name="roleChoice">
               <option value="">Role</option>
+			   <option value="platform_manager" <?php if (isset($_POST['roleChoice']) && $_POST['roleChoice'] === 'platform_manager') echo 'selected'; ?>>Platform Manager</option>
               <option value="manager" <?php if (isset($_POST['roleChoice']) && $_POST['roleChoice'] === 'manager') echo 'selected'; ?>>Manager</option>
               <option value="employee" <?php if (isset($_POST['roleChoice']) && $_POST['roleChoice'] === 'employee') echo 'selected'; ?>>Employee</option>
               <option value="teacher" <?php if (isset($_POST['roleChoice']) && $_POST['roleChoice'] === 'teacher') echo 'selected'; ?>>Teacher</option>
