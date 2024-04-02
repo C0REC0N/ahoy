@@ -188,6 +188,8 @@ if ( isset( $errors ) && !empty( $errors ) ){
         <button class="login-button two" type="submit">Login</button>
 
     </div>
+	
+	<br>
 
     <div class="row" style="background-color:#004aad">
         <p style="color: #ffd79b;"> Don't have an account?</p>
